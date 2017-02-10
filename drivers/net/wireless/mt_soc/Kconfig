@@ -1,0 +1,40 @@
+menu "MediaTek WLAN Config"
+
+config MTK_CONNSYS_WIFI
+	tristate "MediaTek Soc Wi-Fi support"
+	depends on MTK_COMBO
+	depends on MMC
+	depends on IPV6
+	depends on !mt592x
+	select WIRELESS_EXT
+	select WEXT_PRIV
+	select MTK_WLAN_SUPPORT
+	help
+	  This module adds support for wireless adapters based on
+	  MTK Soc chipset.
+
+	  This driver uses the kernel's wireless extensions subsystem.
+
+	  If you choose to build a module, it'll be called dhd. Say M if
+	  unsure.
+
+config MTK_WLAN_CHIP
+	string "MTK_WLAN_CHIP"
+	default "CONSYS" if MTK_CONNSYS_WIFI
+	help
+	   Define the wlan chip type
+
+config MTK_WLAN_SUPPORT
+	bool
+	help
+	   The Wlan switch for the wlan feature in the Android(app,
+	   framework, native, kernel).
+
+config MTK_WAPI_SUPPORT
+	bool "MTK_WAPI_SUPPORT"
+	help
+	   if it is set to TRUE: Support WAPI (WLAN Authentication and
+	   Privacy Infrastructure) if it is set to FALSE: Does not Support
+	   WAPI (WLAN Authentication and Privacy Infrastructure)
+
+endmenu

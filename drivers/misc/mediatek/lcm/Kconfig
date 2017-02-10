@@ -1,0 +1,84 @@
+
+#
+#  Mediatek LCM driver support list
+#
+
+menu "Mediatek LCM driver support"
+
+config NT35517_QHD_DSI_VIDEO
+	bool "Support for LCM nt35517_qhd_dsi_video"
+	default n
+	help
+	    Select this if you are using "nt35517_qhd_dsi_video"
+config CM_N070ICE_DSI_VDO
+	bool "Support for LCM cm_n070ice_dsi_vdo"
+	default n
+	help
+	    Select this if you are using "cm_n070ice_dsi_vdo"
+
+config CM_N070ICE_DSI_VDO_MT8135
+	bool "Support for LCM cm_n070ice_dsi_vdo_mt8135"
+	default n
+	help
+	    Select this if you are using "cm_n070ice_dsi_vdo_mt8135"
+			To config mt8135_evbp1_v2 lcm driver. If choose yes
+			cm_n070ice_dsi_vdo_mt8135 lcm driver will be used
+			This add for half display issue
+
+config HSD070PFW3_8135
+	bool "Support for LCM HSD070PFW3_8135"
+	default n
+	help
+	    Select this if you are using "HSD070PFW3_8135"
+
+config CPT_CLAA101FP01_DSI_VDO
+	bool "Support for LCM CPT_CLAA101FP01_DSI_VDO"
+	default n
+	help
+	    Select this if you are using "CPT_CLAA101FP01_DSI_VDO"
+
+config NT35521_WXGA_DSI_VDO_HH060IA
+	bool "Support for LCM nt35521_wxga_dsi_vdo_hh060ia"
+	default n
+	help
+	    Select this if you are using "nt35521_wxga_dsi_vdo_hh060ia"
+
+config NT51012_WXGA_DSI_VDO
+	bool "Support for LCM nt51012_wxga_dsi_vdo"
+	default n
+	help
+	    Select this if you are using "nt51012_wxga_dsi_vdo"
+
+config CPT_CLAP070WP03XG_SN65DSI83
+	bool "Support for LCM cpt_clap070wp03xg_sn65dsi83"
+	default n
+	help
+	    Select this if you are using "cpt_clap070wp03xg_sn65dsi83"
+			To config mt6595_tablet_p1v1 lcm driver. If choose yes
+			cpt_clap070wp03xg_sn65dsi83 lcm driver will be used
+			This add for half display issue
+
+config CPT_CLAP070WP03XG_LVDS
+	bool "Support for LCM cpt_clap070wp03xg_lvds"
+	default n
+	help
+	    Select this if you are using "cpt_clap070wp03xg_lvds"
+
+config NT35590_HD720_DSI_CMD_AUO
+	bool "Support for LCM nt35590_hd720_dsi_cmd_auo_lcm"
+	default n
+	help
+	    Select this if you are using "nt35590_hd720_dsi_cmd_auo"
+	    
+config HX8392A_DSI_CMD
+	bool "Support for LCM hx8392a_dsi_cmd"
+	default n
+	help
+	    Select this if you are using "hx8392a_dsi_cmd"
+	    
+config HX8392A_DSI_VDO
+	bool "Support for LCM hx8392a_dsi_vdo"
+	default n
+	help
+	    Select this if you are using "hx8392a_dsi_vdo"	    
+endmenu

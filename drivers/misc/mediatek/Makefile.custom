@@ -1,0 +1,107 @@
+
+MTK_PLATFORM := $(subst ",,$(CONFIG_MTK_PLATFORM))
+ccflags-y += -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/include/cust
+
+ARCH_MTK_PROJECT := $(subst ",,$(CONFIG_ARCH_MTK_PROJECT))
+
+MTK_CUSTOM_PATH  := $(srctree)/drivers/misc/mediatek/
+ccflags-y += -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/core \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/camera \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/camera/camera \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/dct \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/dct/dct \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/accelerometer \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/accelerometer/inc \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/alsps \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/alsps/inc \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/cam_cal \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/cam_cal/inc \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/eeprom \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/eeprom/inc \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/flashlight/inc \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/gyroscope \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/gyroscope/inc \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/headset \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/headset/inc \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/imgsensor \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/imgsensor/inc \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/kpd \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/leds \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/leds/inc \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/magnetometer \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/magnetometer/inc \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/ssw/inc \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/touchpanel \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/hdmi/inc \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/lcm/inc \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/sound/inc \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/battery \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/include \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/include/mach \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/include/$(ARCH_MTK_PROJECT) \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT) \
+             -I$(srctree)/include/mach \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/common \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/keypad \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/vibrator \
+             -I$(srctree)/drivers/misc/mediatek/accdet/$(MTK_PLATFORM) \
+             -I$(srctree)/drivers/misc/mediatek/auxadc/$(MTK_PLATFORM) \
+             -I$(srctree)/drivers/misc/mediatek/camera/$(MTK_PLATFORM) \
+             -I$(srctree)/drivers/misc/mediatek/cmdq/$(MTK_PLATFORM) \
+             -I$(srctree)/drivers/misc/mediatek/devinfo/$(MTK_PLATFORM) \
+             -I$(srctree)/drivers/misc/mediatek/dispsys/$(MTK_PLATFORM) \
+             -I$(srctree)/drivers/misc/mediatek/dual_ccci/$(MTK_PLATFORM)/include \
+             -I$(srctree)/drivers/misc/mediatek/leds/$(MTK_PLATFORM) \
+             -I$(srctree)/drivers/misc/mediatek/vibrator/$(MTK_PLATFORM) \
+             -I$(srctree)/drivers/misc/mediatek/smi/$(MTK_PLATFORM) \
+             -I$(srctree)/drivers/misc/mediatek/uart/$(MTK_PLATFORM) \
+			 -I$(srctree)/drivers/misc/mediatek/video/$(MTK_PLATFORM)/videox   \
+			 -I$(srctree)/drivers/misc/mediatek/video/$(MTK_PLATFORM)/videox/ovl_engine   \
+             -I$(srctree)/drivers/misc/mediatek/video/$(MTK_PLATFORM)/dispsys   \
+			 -I$(srctree)/drivers/misc/mediatek/hdmi/hdmitx/$(MTK_PLATFORM)/inc \
+             -I$(srctree)/drivers/misc/mediatek/met/platform/$(MTK_PLATFORM) \
+             -I$(srctree)/drivers/misc/mediatek/met/$(MTK_PLATFORM) \
+             -I$(srctree)/drivers/misc/mediatek/i2c/$(MTK_PLATFORM) \
+             -I$(srctree)/drivers/mmc \
+             -I$(srctree) \
+             -I$(MTK_CUSTOM_PATH)/dual_ccci/include \
+             -I$(MTK_CUSTOM_PATH)/sync \
+             -I$(MTK_CUSTOM_PATH)/video \
+             -I$(MTK_CUSTOM_PATH)/ssw/inc \
+             -I$(MTK_CUSTOM_PATH)/lens/inc \
+			 -I$(srctree)/drivers/staging/android \
+			 -I$(srctree)/drivers/staging/android/ion  \
+			 -I$(srctree)/drivers/staging/android/ion/mtk
+# GuoXin Add
+ccflags-y += -I$(MTK_CUSTOM_PATH)/wdk \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/leds/mt65xx \
+             -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/imgsensor/inc \
+             -I$(MTK_CUSTOM_PATH)/alsps/inc \
+             -I$(MTK_CUSTOM_PATH)/accelerometer/inc \
+             -I$(MTK_CUSTOM_PATH)/gyroscope/inc \
+             -I$(MTK_CUSTOM_PATH)/magnetometer/inc
+
+ # Minrui Add
+ ccflags-y += -I$(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)/touchpanel/ft5406_82 \
+
+# GuoXin folder structure v2
+MTK_PROJECT_PATH_ROOT := $(srctree)/arch/arm/mach-$(MTK_PLATFORM)/$(ARCH_MTK_PROJECT)
+MTK_PLATFORM_PATH_ROOT := $(srctree)/arch/arm/mach-$(MTK_PLATFORM)
+
+ccflags-y += -I$(MTK_PROJECT_PATH_ROOT)/accdet \
+             -I$(MTK_PROJECT_PATH_ROOT)/rtc \
+             -I$(MTK_PROJECT_PATH_ROOT)/power \
+             -I$(MTK_PROJECT_PATH_ROOT)/dct/dct
+
+ccflags-y += -I$(MTK_CUSTOM_PATH)/imgsensor/inc \
+             -I$(MTK_CUSTOM_PATH)/flashlight/inc \
+             -I$(MTK_CUSTOM_PATH)/cam_cal/inc \
+             -I$(srctree)
+
+CUSTOM_KERNEL_FLAGS := $(addprefix -D, $(shell echo \
+             $(CONFIG_CUSTOM_KERNEL_FLASHLIGHT) \
+             $(CONFIG_CUSTOM_KERNEL_LCM) \
+             $(CONFIG_CUSTOM_KERNEL_IMGSENSOR) | tr a-z A-Z))
+ccflags-y += $(CUSTOM_KERNEL_FLAGS)
+
+ccflags-y += -I$(srctree)/include/linux/camera/$(CONFIG_MTK_PLATFORM)

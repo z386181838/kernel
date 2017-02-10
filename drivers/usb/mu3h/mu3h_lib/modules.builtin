@@ -1,0 +1,3 @@
+kernel/drivers/usb/mu3h/mu3h_lib/xhci-mtk.ko
+kernel/drivers/usb/mu3h/mu3h_lib/xhci-mtk-power.ko
+kernel/drivers/usb/mu3h/mu3h_lib/xhci-mtk-scheduler.ko

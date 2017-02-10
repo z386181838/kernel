@@ -1,0 +1,6 @@
+config MET_MMC_PROFILE
+	bool "Enable MET mmc profile"
+	depends on MTK_MMC != n
+	help
+	  This is an option for use by developers; most people should
+	  say N here.  This enables MET mmc profile index to profile mmc behavior.

@@ -1,0 +1,33 @@
+
+menuconfig SND_SOC_MT8135
+    bool "SoC Audio support for MT8135"
+    depends on ARCH_MT8135
+    help
+        If you say Y, enable SND_SOC_MT8135.
+
+config SND_SOC_MT6595
+    bool "SND_SOC_MT6595"
+    depends on ARCH_MT6595
+    default y
+    help
+        If you say Y, enable SND_SOC_MT6595 driver.
+
+config MTK_SPEAKER
+    bool "MTK_SPEAKER"
+    depends on ARCH_MT6595
+    default y
+    help
+        If you say Y, enable MTK_SPEAKER_AMP
+        
+config SND_SOC_MT8127
+    tristate "SoC Audio for MediaTek MT8127"
+    depends on ARCH_MT8127
+    default n
+    help
+        Say Y if you want to add support for SoC audio on the MediaTek MT8127 platform.
+
+config SND_SOC_MT7623
+    bool "SoC Audio support for MT7623"
+    depends on ARCH_MT7623
+    help
+        If you say Y, enable SND_SOC_MT7623.

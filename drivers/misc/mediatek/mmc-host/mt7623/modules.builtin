@@ -1,0 +1,5 @@
+kernel/drivers/misc/mediatek/mmc-host/mt7623/dbg.ko
+kernel/drivers/misc/mediatek/mmc-host/mt7623/mt_sd_misc.ko
+kernel/drivers/misc/mediatek/mmc-host/mt7623/sd.ko
+kernel/drivers/misc/mediatek/mmc-host/mt7623/sdio_autok.ko
+kernel/drivers/misc/mediatek/mmc-host/mt7623/sdio_autok_proc.ko

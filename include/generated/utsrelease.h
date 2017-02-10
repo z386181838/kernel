@@ -1,0 +1,2 @@
+#define UTS_RELEASE "3.10.20"
+#define BUILD_FINGERPRINT ""
